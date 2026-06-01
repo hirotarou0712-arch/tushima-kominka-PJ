@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# エディタ・IDE（個人設定はコミットしない）
+.idea/
+*.swp
+*.swo
+*~
+
+# 環境変数・認証情報（将来追加した場合）
+.env
+.env.*
+!.env.example
+
+# 一時ファイル
+*.tmp
+*.bak
+*.log
