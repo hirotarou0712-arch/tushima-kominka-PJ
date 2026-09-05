@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>建具表・求積図（消防提出用）2026-08-31｜対馬市厳原町久田</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #555;
+    --line: #ccc;
+    --accent: #1e4d7b;
+    --bg: #fff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.45;
+    font-size: 11pt;
+  }
+  .page {
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 14mm 12mm;
+  }
+  h1 {
+    font-size: 18pt;
+    margin: 0 0 4px;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 6px;
+  }
+  h2 {
+    font-size: 13pt;
+    margin: 22px 0 8px;
+    padding-left: 8px;
+    border-left: 4px solid var(--accent);
+  }
+  .sub { color: var(--muted); font-size: 10pt; margin: 0 0 12px; }
+  .meta-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 16px;
+    border: 1px solid var(--line);
+    padding: 10px 12px;
+    margin: 12px 0 16px;
+    font-size: 10pt;
+  }
+  .meta-box dt { font-weight: 600; color: var(--muted); }
+  .meta-box dd { margin: 0 0 4px; }
+  .notes {
+    background: #f7f7f7;
+    border: 1px solid var(--line);
+    padding: 10px 12px;
+    font-size: 9.5pt;
+    margin: 12px 0;
+  }
+  .notes ul { margin: 6px 0 0; padding-left: 1.2em; }
+  table.list {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+  }
+  table.list th, table.list td {
+    border: 1px solid #999;
+    padding: 3px 4px;
+    vertical-align: top;
+  }
+  table.list th {
+    background: #e8eef4;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  table.list td.id { font-weight: 700; color: var(--accent); white-space: nowrap; }
+  table.list td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  table.list td.space { text-align: center; font-weight: 700; white-space: nowrap; }
+  table.list td.space.yes { color: #1b5e20; }
+  table.list td.space.yes-note { color: #e65100; }
+  table.list td.space.no { color: #b71c1c; }
+  table.list tr.bath { background: #f3f7fb; }
+  table.list tr.no-space { background: #fff3f3; }
+  table.list tr.note-space { background: #fff8e7; }
+  table.list tr.kyaku { background: #fff0f0; }
+  table.list tr.total { background: #e8eef4; font-weight: 700; }
+  table.list tr.subtotal { background: #f3f6f9; font-weight: 700; }
+  .tag-kyaku {
+    display: inline-block;
+    background: #b71c1c;
+    color: #fff;
+    font-size: 8pt;
+    padding: 0 5px;
+    border-radius: 3px;
+    margin-left: 4px;
+    font-weight: 700;
+  }
+  .kyoseki-note { font-size: 9pt; color: var(--muted); margin: 8px 0 12px; }
+  .map {
+    text-align: center;
+    margin: 8px 0 16px;
+  }
+  .map img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+  }
+  .detail {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid var(--line);
+    padding: 10px 12px;
+    margin: 0 0 12px;
+  }
+  .detail header h3 {
+    margin: 0 0 4px;
+    font-size: 12pt;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 1px 8px;
+    border-radius: 3px;
+    font-size: 11pt;
+    margin-right: 4px;
+  }
+  .spec { margin: 2px 0; font-weight: 600; }
+  .meta { margin: 0; color: var(--muted); font-size: 9.5pt; }
+  .space-line.yes strong { color: #1b5e20; }
+  .space-line.yes-note strong { color: #e65100; }
+  .space-line.no strong { color: #b71c1c; }
+  .gallery {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+  .gallery figure {
+    margin: 0;
+    flex: 1 1 45%;
+    max-width: 48%;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: contain;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+  }
+  .gallery figcaption {
+    font-size: 8pt;
+    color: var(--muted);
+    text-align: center;
+  }
+  .more { font-size: 8.5pt; color: var(--muted); margin: 4px 0 0; }
+  .footer {
+    margin-top: 24px;
+    font-size: 8.5pt;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    padding-top: 8px;
+  }
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+  @media print {
+    body { font-size: 10pt; }
+    .page { padding: 0; max-width: none; }
+    .noprint { display: none; }
+    a { color: inherit; text-decoration: none; }
+    .detail { break-inside: avoid; }
+    h2 { break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <p class="noprint" style="background:#fff8e1;border:1px solid #e6c200;padding:8px 10px;font-size:10pt;">
+    印刷ヒント: ブラウザの印刷 →「PDFに保存」。余白は標準、背景グラフィックON推奨。
+  </p>
+
+  <h1>建具表・求積図（消防法令確認用・参考資料）</h1>
+  <p class="sub">住宅宿泊事業（民泊）事前相談／無窓階算定用の床面積求積／客室標記</p>
+
+  <dl class="meta-box">
+    <div><dt>物件</dt><dd>長崎県対馬市厳原町久田　古民家（本館1階＋風呂棟）</dd></div>
+    <div><dt>作成日</dt><dd>2026-08-31（建具: 08-14／空地: 08-15／求積・客室: 08-31）</dd></div>
+    <div><dt>資料構成</dt><dd>①一覧表　②対応図　③求積図・客室　④平面・検算　⑤写真台帳</dd></div>
+    <div><dt>採寸方法</dt><dd>現地メジャー採寸（cm）／写真は現場撮影</dd></div>
+  </dl>
+
+  <div class="notes">
+    <strong>注記（提出時の前提）</strong>
+    <ul>
+      <li>本資料は消防署への事前相談・設備判定用の<strong>自作参考資料</strong>です。正式な設計図書ではありません。</li>
+      <li>貸出想定範囲は<strong>本館1階</strong>。浴室は敷地内の<strong>別棟（風呂棟）</strong>です。</li>
+      <li>番号（D=ドア、W=窓）は「窓扉対応図」および写真台帳と共通です。</li>
+      <li>窓台高さは<strong>室内床面から窓下端まで</strong>の寸法です。</li>
+      <li>材質欄の「ガラス」は枠・障子を含む開口の主な採光面を指します。網入り／型板等の細分は写真を参照ください（表では未細分）。</li>
+      <li><strong>空地1m以上</strong>の列は、開口外側に概ね1m以上の通路・空地があるかの現地確認結果です。<strong>D05のみ「なし」</strong>、それ以外は「あり」。</li>
+      <li><strong>W05（※）</strong>: 窓の先に1m以上のスペースはあるが<strong>敷地境界付近</strong>。敷地の外を含めれば1mの空地あり。</li>
+      <li>アルミサッシ表記の建具（D06・D07）は風呂棟です。一覧の風呂棟行は背景を薄く示しています。</li>
+      <li><strong>床面積の求積</strong>は現地内寸（cm）を長方形に分けて合算した<strong>自作参考値</strong>です。壁芯ではありません。無窓階の判定は所轄消防署にお願いします。</li>
+      <li><strong>客室</strong>は和室1〜4です（一棟貸し。布団を敷く部屋）。納戸・水回り・廊下は客室にしません。</li>
+      <li>和室1は<strong>287×369＋128×369</strong>（369＝玄関179＋廊下190）。和室2の床の間は<strong>320×68</strong>（幅は図面上の採用値）。ボイラー室奥行は浴室175cmと同じ。</li>
+      <li>右側廊下・収納の奥行は、納戸（92＋225）＋床の間（68）＋和室2（382）の合算です。トイレ前廊下はキッチン幅370×奥行92（洗面台を含む）。</li>
+    </ul>
+  </div>
+
+  <h2>① 建具一覧</h2>
+  <table class="list">
+    <thead>
+      <tr>
+        <th>番号</th><th>種類</th><th>棟</th><th>設置場所</th>
+        <th>幅<br>(cm)</th><th>高さ<br>(cm)</th><th>窓台高<br>(cm)</th>
+        <th>材質</th><th>空地<br>1m以上</th><th>備考</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td class="id">D01</td>
+        <td>ドア</td>
+        <td>本館</td>
+        <td>玄関</td>
+        <td class="num">88</td>
+        <td class="num">174</td>
+        <td class="num">—</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td>玄関</td>
+      </tr>
+      <tr>
+        <td class="id">D02</td>
+        <td>ドア</td>
+        <td>本館</td>
+        <td>和室3【客室】南面</td>
+        <td class="num">75</td>
+        <td class="num">175</td>
+        <td class="num">—</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td>外は地面から65cm</td>
+      </tr>
+      <tr>
+        <td class="id">D03</td>
+        <td>ドア</td>
+        <td>本館</td>
+        <td>和室2【客室】南面</td>
+        <td class="num">90</td>
+        <td class="num">175</td>
+        <td class="num">—</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="id">D04</td>
+        <td>ドア</td>
+        <td>本館</td>
+        <td>和室4【客室】南面</td>
+        <td class="num">96</td>
+        <td class="num">184</td>
+        <td class="num">—</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td>外は地面から67cm</td>
+      </tr>
+      <tr class="no-space">
+        <td class="id">D05</td>
+        <td>ドア</td>
+        <td>本館</td>
+        <td>納戸（約7㎡）北面</td>
+        <td class="num">97</td>
+        <td class="num">179</td>
+        <td class="num">—</td>
+        <td>ガラス</td>
+        <td class="space no">なし</td>
+        <td>納戸／外側空地1m未満</td>
+      </tr>
+      <tr>
+        <td class="id">W01</td>
+        <td>窓</td>
+        <td>本館</td>
+        <td>和室4【客室】西面</td>
+        <td class="num">95</td>
+        <td class="num">86</td>
+        <td class="num">84</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="id">W02</td>
+        <td>窓</td>
+        <td>本館</td>
+        <td>洗面所</td>
+        <td class="num">43</td>
+        <td class="num">71</td>
+        <td class="num">110</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td>洗面所</td>
+      </tr>
+      <tr>
+        <td class="id">W03</td>
+        <td>窓</td>
+        <td>本館</td>
+        <td>キッチン</td>
+        <td class="num">75</td>
+        <td class="num">70</td>
+        <td class="num">118</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td>キッチン</td>
+      </tr>
+      <tr>
+        <td class="id">W04</td>
+        <td>窓</td>
+        <td>本館</td>
+        <td>キッチン北側（トイレ外）</td>
+        <td class="num">45</td>
+        <td class="num">59</td>
+        <td class="num">115</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td>トイレの外</td>
+      </tr>
+      <tr class="note-space">
+        <td class="id">W05</td>
+        <td>窓</td>
+        <td>本館</td>
+        <td>トイレ北面</td>
+        <td class="num">37</td>
+        <td class="num">44</td>
+        <td class="num">127</td>
+        <td>ガラス</td>
+        <td class="space yes-note">あり※</td>
+        <td>敷地ギリギリ。敷地外含め1m空地あり</td>
+      </tr>
+      <tr>
+        <td class="id">W06</td>
+        <td>窓</td>
+        <td>本館</td>
+        <td>トイレ西面</td>
+        <td class="num">45</td>
+        <td class="num">45</td>
+        <td class="num">127</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="id">W07</td>
+        <td>窓</td>
+        <td>本館</td>
+        <td>和室1【客室】付近・北面</td>
+        <td class="num">33</td>
+        <td class="num">44</td>
+        <td class="num">120</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="id">W08</td>
+        <td>窓</td>
+        <td>本館</td>
+        <td>和室1【客室】北面</td>
+        <td class="num">63</td>
+        <td class="num">74</td>
+        <td class="num">110</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="id">W09</td>
+        <td>窓</td>
+        <td>本館</td>
+        <td>和室2【客室】／廊下側・東面</td>
+        <td class="num">85</td>
+        <td class="num">120</td>
+        <td class="num">60</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td>廊下</td>
+      </tr>
+      <tr class="bath">
+        <td class="id">D06</td>
+        <td>ドア</td>
+        <td>風呂棟</td>
+        <td>脱衣所入口</td>
+        <td class="num">78</td>
+        <td class="num">182</td>
+        <td class="num">—</td>
+        <td>アルミサッシ</td>
+        <td class="space yes">あり</td>
+        <td>アルミサッシにガラス付き</td>
+      </tr>
+      <tr class="bath">
+        <td class="id">D07</td>
+        <td>ドア</td>
+        <td>風呂棟</td>
+        <td>ボイラー室入口</td>
+        <td class="num">86</td>
+        <td class="num">180</td>
+        <td class="num">—</td>
+        <td>アルミサッシ</td>
+        <td class="space yes">あり</td>
+        <td>アルミサッシとガラス</td>
+      </tr>
+      <tr class="bath">
+        <td class="id">W10</td>
+        <td>窓</td>
+        <td>風呂棟</td>
+        <td>脱衣所／浴室側</td>
+        <td class="num">55</td>
+        <td class="num">85</td>
+        <td class="num">96</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td></td>
+      </tr>
+      <tr class="bath">
+        <td class="id">W11</td>
+        <td>窓</td>
+        <td>風呂棟</td>
+        <td>浴室</td>
+        <td class="num">75</td>
+        <td class="num">84</td>
+        <td class="num">105</td>
+        <td>ガラス</td>
+        <td class="space yes">あり</td>
+        <td>外の地面からは137センチメートル</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>② 窓・扉対応図（平面図上の番号位置）</h2>
+  <div class="map">
+    <img src="assets/窓扉対応図_面積更新_2026-08-24.png" alt="窓扉対応図（面積更新）">
+  </div>
+  <p class="sub">緑=窓（W）、青=ドア（D）。下部が風呂棟（別棟）。各室の「約●㎡」は現地内寸からの検算値（2026-08-24更新）。</p>
+
+  <h2>③ 求積図・客室標記（建物ごとの床面積）</h2>
+  <p class="sub">齋藤様ご依頼の「建物ごとの床面積の求積図」と、寸法入り平面図への「客室」標記です。内寸（cm）を長方形に分けて合算しています。</p>
+  <div class="map">
+    <img src="assets/求積図_客室標記_2026-08-31.png" alt="求積図・客室標記">
+  </div>
+  <p class="kyoseki-note">赤枠「客室」＝宿泊に使用する和室1〜4。番号A1〜A13は本館、B1〜B3は風呂棟の求積区画です。</p>
+
+  <h3 style="font-size:11pt;margin:14px 0 6px;">本館（1階）</h3>
+  <table class="list">
+    <thead>
+      <tr>
+        <th>番号</th><th>区画</th><th>用途</th><th>算出（cm）</th><th>面積（㎡）</th><th>備考</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="id">A1</td><td>キッチン</td><td>共用</td><td class="num">370 × 287</td><td class="num">10.62</td><td></td></tr>
+      <tr class="kyaku"><td class="id">A2</td><td>和室1 <span class="tag-kyaku">客室</span></td><td>客室</td><td class="num">287×369 ＋ 128×369</td><td class="num">15.31</td><td>369＝玄関179＋廊下190</td></tr>
+      <tr><td class="id">A3</td><td>納戸（物置）</td><td>物置</td><td class="num">190 × (92＋225)</td><td class="num">6.02</td><td></td></tr>
+      <tr class="kyaku"><td class="id">A4</td><td>和室2 <span class="tag-kyaku">客室</span></td><td>客室</td><td class="num">380 × 382</td><td class="num">14.52</td><td></td></tr>
+      <tr class="kyaku"><td class="id">A5</td><td>和室2 床の間 <span class="tag-kyaku">客室</span></td><td>客室</td><td class="num">320 × 68</td><td class="num">2.18</td><td>幅320は図面上の採用値</td></tr>
+      <tr class="kyaku"><td class="id">A6</td><td>和室3 <span class="tag-kyaku">客室</span></td><td>客室</td><td class="num">286 × 315</td><td class="num">9.01</td><td></td></tr>
+      <tr class="kyaku"><td class="id">A7</td><td>和室4 <span class="tag-kyaku">客室</span></td><td>客室</td><td class="num">336 × 315</td><td class="num">10.58</td><td></td></tr>
+      <tr><td class="id">A8</td><td>和室4 収納</td><td>収納</td><td class="num">114 × 100</td><td class="num">1.14</td><td></td></tr>
+      <tr><td class="id">A9</td><td>玄関（畳）</td><td>共用</td><td class="num">179 × 190</td><td class="num">3.40</td><td></td></tr>
+      <tr><td class="id">A10</td><td>玄関（土間）</td><td>共用</td><td class="num">179 × 194</td><td class="num">3.47</td><td></td></tr>
+      <tr><td class="id">A11</td><td>トイレ</td><td>共用</td><td class="num">176 × 90</td><td class="num">1.58</td><td></td></tr>
+      <tr><td class="id">A12</td><td>トイレ前廊下（洗面含む）</td><td>廊下</td><td class="num">370 × 92</td><td class="num">3.40</td><td>キッチン幅×奥行92</td></tr>
+      <tr><td class="id">A13</td><td>右側廊下・収納</td><td>廊下</td><td class="num">110 × 767</td><td class="num">8.44</td><td>767＝92＋225＋68＋382</td></tr>
+      <tr class="subtotal"><td colspan="4">客室計（A2＋A4＋A5＋A6＋A7）</td><td class="num">51.60</td><td>和室1〜4</td></tr>
+      <tr class="total"><td colspan="4">本館 床面積合計</td><td class="num">89.68</td><td>1/30 ≒ 2.99㎡（参考）</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:11pt;margin:16px 0 6px;">風呂棟（別棟・1階）</h3>
+  <table class="list">
+    <thead>
+      <tr>
+        <th>番号</th><th>区画</th><th>用途</th><th>算出（cm）</th><th>面積（㎡）</th><th>備考</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bath"><td class="id">B1</td><td>ボイラー室</td><td>設備</td><td class="num">190 × 175</td><td class="num">3.33</td><td>奥行は浴室と同じ</td></tr>
+      <tr class="bath"><td class="id">B2</td><td>浴室</td><td>共用</td><td class="num">227 × 175</td><td class="num">3.97</td><td></td></tr>
+      <tr class="bath"><td class="id">B3</td><td>脱衣所</td><td>共用</td><td class="num">136 × 175</td><td class="num">2.38</td><td></td></tr>
+      <tr class="total"><td colspan="4">風呂棟 床面積合計</td><td class="num">9.68</td><td>1/30 ≒ 0.32㎡（参考）</td></tr>
+    </tbody>
+  </table>
+  <p class="kyoseki-note">風呂棟2階は物干しで、床のある居室はありません。求積対象外としています。</p>
+
+  <h2>④ 平面図・寸法（現地採寸）</h2>
+  <p class="sub">赤数字＝内寸（cm）。③の求積の根拠図です。</p>
+  <div class="map">
+    <img src="assets/面積検算_2026-08-31.png" alt="平面図・各室寸法">
+  </div>
+
+  <h2>⑤ 写真台帳（番号別）</h2>
+  <p class="sub">各番号とも代表写真を掲載。原寸・全枚は採寸アプリ書き出し（`04_現地データ/建具写真_2026-08-14`）を正本とします。</p>
+
+    <section class="detail" id="D01">
+      <header>
+        <h3><span class="badge">D01</span> ドア　本館／玄関</h3>
+        <p class="spec">幅 88 × 高さ 174 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: 玄関　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/D01_001.jpg" alt="D01"><figcaption>D01_001.jpg</figcaption></figure><figure><img src="photos/D01_002.jpg" alt="D01"><figcaption>D01_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="D02">
+      <header>
+        <h3><span class="badge">D02</span> ドア　本館／和室3【客室】南面</h3>
+        <p class="spec">幅 75 × 高さ 175 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: 外は地面から65cm　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/D02_001.jpg" alt="D02"><figcaption>D02_001.jpg</figcaption></figure><figure><img src="photos/D02_002.jpg" alt="D02"><figcaption>D02_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="D03">
+      <header>
+        <h3><span class="badge">D03</span> ドア　本館／和室2【客室】南面</h3>
+        <p class="spec">幅 90 × 高さ 175 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: （なし）　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/D03_001.jpg" alt="D03"><figcaption>D03_001.jpg</figcaption></figure><figure><img src="photos/D03_002.jpg" alt="D03"><figcaption>D03_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="D04">
+      <header>
+        <h3><span class="badge">D04</span> ドア　本館／和室4【客室】南面</h3>
+        <p class="spec">幅 96 × 高さ 184 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: 外は地面から67cm　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/D04_001.jpg" alt="D04"><figcaption>D04_001.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="D05">
+      <header>
+        <h3><span class="badge">D05</span> ドア　本館／納戸（約7㎡）北面</h3>
+        <p class="spec">幅 97 × 高さ 179 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: 納戸　／　空地: 1m未満（本表中で唯一）</p>
+        <p class="meta space-line no">外側空地（通路）1m以上: <strong>なし</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/D05_001.jpg" alt="D05"><figcaption>D05_001.jpg</figcaption></figure><figure><img src="photos/D05_002.jpg" alt="D05"><figcaption>D05_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="W01">
+      <header>
+        <h3><span class="badge">W01</span> 窓　本館／和室4【客室】西面</h3>
+        <p class="spec">幅 95 × 高さ 86 cm／窓台高さ（床面から）84 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: （なし）　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/W01_001.jpg" alt="W01"><figcaption>W01_001.jpg</figcaption></figure><figure><img src="photos/W01_002.jpg" alt="W01"><figcaption>W01_002.jpg</figcaption></figure></div>
+      <p class="more">他 1 枚あり（ZIP原データ参照）</p>
+    </section>
+    <section class="detail" id="W02">
+      <header>
+        <h3><span class="badge">W02</span> 窓　本館／洗面所</h3>
+        <p class="spec">幅 43 × 高さ 71 cm／窓台高さ（床面から）110 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: 洗面所　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/W02_001.jpg" alt="W02"><figcaption>W02_001.jpg</figcaption></figure><figure><img src="photos/W02_002.jpg" alt="W02"><figcaption>W02_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="W03">
+      <header>
+        <h3><span class="badge">W03</span> 窓　本館／キッチン</h3>
+        <p class="spec">幅 75 × 高さ 70 cm／窓台高さ（床面から）118 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: キッチン　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/W03_001.jpg" alt="W03"><figcaption>W03_001.jpg</figcaption></figure><figure><img src="photos/W03_002.jpg" alt="W03"><figcaption>W03_002.jpg</figcaption></figure></div>
+      <p class="more">他 1 枚あり（ZIP原データ参照）</p>
+    </section>
+    <section class="detail" id="W04">
+      <header>
+        <h3><span class="badge">W04</span> 窓　本館／キッチン北側（トイレ外）</h3>
+        <p class="spec">幅 45 × 高さ 59 cm／窓台高さ（床面から）115 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: トイレの外　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/W04_001.jpg" alt="W04"><figcaption>W04_001.jpg</figcaption></figure><figure><img src="photos/W04_002.jpg" alt="W04"><figcaption>W04_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="W05">
+      <header>
+        <h3><span class="badge">W05</span> 窓　本館／トイレ北面</h3>
+        <p class="spec">幅 37 × 高さ 44 cm／窓台高さ（床面から）127 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: （なし）　／　空地: 先に1m以上のスペースあり。ただし敷地ギリギリで、敷地の外を含めれば1mの空地あり。</p>
+        <p class="meta space-line yes-note">外側空地（通路）1m以上: <strong>あり※</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/W05_001.jpg" alt="W05"><figcaption>W05_001.jpg</figcaption></figure><figure><img src="photos/W05_002.jpg" alt="W05"><figcaption>W05_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="W06">
+      <header>
+        <h3><span class="badge">W06</span> 窓　本館／トイレ西面</h3>
+        <p class="spec">幅 45 × 高さ 45 cm／窓台高さ（床面から）127 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: （なし）　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/W06_001.jpg" alt="W06"><figcaption>W06_001.jpg</figcaption></figure><figure><img src="photos/W06_002.jpg" alt="W06"><figcaption>W06_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="W07">
+      <header>
+        <h3><span class="badge">W07</span> 窓　本館／和室1【客室】付近・北面</h3>
+        <p class="spec">幅 33 × 高さ 44 cm／窓台高さ（床面から）120 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: （なし）　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/W07_001.jpg" alt="W07"><figcaption>W07_001.jpg</figcaption></figure><figure><img src="photos/W07_002.jpg" alt="W07"><figcaption>W07_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="W08">
+      <header>
+        <h3><span class="badge">W08</span> 窓　本館／和室1【客室】北面</h3>
+        <p class="spec">幅 63 × 高さ 74 cm／窓台高さ（床面から）110 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: （なし）　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/W08_001.jpg" alt="W08"><figcaption>W08_001.jpg</figcaption></figure><figure><img src="photos/W08_002.jpg" alt="W08"><figcaption>W08_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="W09">
+      <header>
+        <h3><span class="badge">W09</span> 窓　本館／和室2【客室】／廊下側・東面</h3>
+        <p class="spec">幅 85 × 高さ 120 cm／窓台高さ（床面から）60 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: 廊下　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/W09_001.jpg" alt="W09"><figcaption>W09_001.jpg</figcaption></figure><figure><img src="photos/W09_002.jpg" alt="W09"><figcaption>W09_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="D06">
+      <header>
+        <h3><span class="badge">D06</span> ドア　風呂棟／脱衣所入口</h3>
+        <p class="spec">幅 78 × 高さ 182 cm</p>
+        <p class="meta">材質: アルミサッシ　／　メモ: アルミサッシにガラス付き　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/D06_001.jpg" alt="D06"><figcaption>D06_001.jpg</figcaption></figure><figure><img src="photos/D06_002.jpg" alt="D06"><figcaption>D06_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="D07">
+      <header>
+        <h3><span class="badge">D07</span> ドア　風呂棟／ボイラー室入口</h3>
+        <p class="spec">幅 86 × 高さ 180 cm</p>
+        <p class="meta">材質: アルミサッシ　／　メモ: アルミサッシとガラス　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/D07_001.jpg" alt="D07"><figcaption>D07_001.jpg</figcaption></figure><figure><img src="photos/D07_002.jpg" alt="D07"><figcaption>D07_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="W10">
+      <header>
+        <h3><span class="badge">W10</span> 窓　風呂棟／脱衣所／浴室側</h3>
+        <p class="spec">幅 55 × 高さ 85 cm／窓台高さ（床面から）96 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: （なし）　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/W10_001.jpg" alt="W10"><figcaption>W10_001.jpg</figcaption></figure><figure><img src="photos/W10_002.jpg" alt="W10"><figcaption>W10_002.jpg</figcaption></figure></div>
+      
+    </section>
+    <section class="detail" id="W11">
+      <header>
+        <h3><span class="badge">W11</span> 窓　風呂棟／浴室</h3>
+        <p class="spec">幅 75 × 高さ 84 cm／窓台高さ（床面から）105 cm</p>
+        <p class="meta">材質: ガラス　／　メモ: 外の地面からは137センチメートル　／　空地1m以上: あり（1m以上）</p>
+        <p class="meta space-line yes">外側空地（通路）1m以上: <strong>あり</strong></p>
+      </header>
+      <div class="gallery"><figure><img src="photos/W11_001.jpg" alt="W11"><figcaption>W11_001.jpg</figcaption></figure><figure><img src="photos/W11_002.jpg" alt="W11"><figcaption>W11_002.jpg</figcaption></figure></div>
+      <p class="more">他 1 枚あり（ZIP原データ参照）</p>
+    </section>
+
+  <div class="footer">
+    作成: 物件関係者（自作）／建具採寸: 2026-08-14／空地確認: 2026-08-15／求積・客室標記: 2026-08-31／対応図・平面: マイホームクラウド＋現地採寸<br>
+    問い合わせ先（消防）: 対馬市消防署 予防課　※本資料は必要設備判定のための参考提出用
+  </div>
+</div>
+</body>
+</html>

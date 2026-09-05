@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>住宅宿泊事業の用に供する承諾書</title>
+  <style>
+    @page { size: A4; margin: 20mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
+      font-size: 12pt;
+      line-height: 1.8;
+      color: #111;
+      max-width: 180mm;
+      margin: 0 auto;
+      padding: 14mm 10mm;
+    }
+    h1 {
+      text-align: center;
+      font-size: 18pt;
+      letter-spacing: 0.15em;
+      margin: 0 0 1.5em;
+      font-weight: bold;
+    }
+    .date { text-align: right; margin-bottom: 1.5em; }
+    .to { margin: 1.2em 0 1.8em; font-size: 13pt; }
+    .from {
+      text-align: right;
+      margin: 0 0 2em;
+      line-height: 1.9;
+    }
+    .blank { border-bottom: 1px solid #333; min-width: 7em; display: inline-block; padding: 0 0.3em; }
+    .blank.w { min-width: 14em; }
+    .blank.xl { min-width: 20em; }
+    .body-text { margin: 1.2em 0 1.5em; }
+    .kigo {
+      margin: 1.5em 0 0.5em;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 0.5em;
+    }
+    table.meta {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.8em 0 1.5em;
+    }
+    table.meta th, table.meta td {
+      border: 1px solid #333;
+      padding: 0.55em 0.7em;
+      vertical-align: top;
+      text-align: left;
+    }
+    table.meta th {
+      width: 32%;
+      background: #f5f5f5;
+      font-weight: normal;
+    }
+    .note {
+      font-size: 9.5pt;
+      border: 1px solid #999;
+      padding: 0.8em 1em;
+      margin-top: 2em;
+      background: #fafafa;
+      line-height: 1.6;
+    }
+    .hint {
+      font-size: 9pt;
+      color: #666;
+      margin-top: 2em;
+      border-top: 1px dashed #aaa;
+      padding-top: 0.8em;
+    }
+    @media print {
+      body { padding: 0; }
+      .hint, .no-print, .note { display: none; }
+    }
+    .toolbar {
+      position: sticky; top: 0; background: #fff; border-bottom: 1px solid #ccc;
+      padding: 8px 0; margin-bottom: 12px; font-family: sans-serif; font-size: 13px;
+    }
+    .toolbar button {
+      padding: 6px 14px; margin-right: 8px; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar no-print">
+    <button onclick="window.print()">印刷 / PDF保存</button>
+    <span>茨城県様式を参考に、長崎県知事宛てに整えた叩き台です。</span>
+  </div>
+
+  <p class="date">
+    令和 <span class="blank">　　</span> 年 <span class="blank">　　</span> 月 <span class="blank">　　</span> 日
+  </p>
+
+  <h1>住宅宿泊事業の用に供する承諾書</h1>
+
+  <p class="to">長崎県知事　殿</p>
+
+  <div class="from">
+    （賃貸人）<br>
+    住所　<span class="blank xl">【父の住所】</span><br>
+    氏名　<span class="blank w">【父・氏名】</span>　　印
+  </div>
+
+  <p class="body-text">
+    下記の住宅について、住宅宿泊事業法第2条第3項の住宅宿泊事業に使用することを承諾します。
+  </p>
+
+  <p class="kigo">記</p>
+
+  <table class="meta">
+    <tr>
+      <th>（1）物件の表示<br>所在</th>
+      <td>
+        長崎県対馬市厳原町久田字洲賀崎 <span class="blank">704</span> 番<br>
+        <span class="blank xl">【住居表示があれば記入】</span>
+      </td>
+    </tr>
+    <tr>
+      <th>家屋番号または<br>建物の名称</th>
+      <td><span class="blank xl">【建物全部事項の家屋番号】</span></td>
+    </tr>
+    <tr>
+      <th>（2）住宅宿泊事業の<br>届出を行う者</th>
+      <td>
+        氏名　小島 広太郎<br>
+        住所　福岡県福岡市中央区薬院<span class="blank w">【番地】</span>
+      </td>
+    </tr>
+    <tr>
+      <th>（3）承諾に当たっての条件</th>
+      <td>
+        特になし<br>
+        （条件がある場合のみ記入）<span class="blank xl">【】</span>
+      </td>
+    </tr>
+  </table>
+
+  <p>
+    以上
+  </p>
+
+  <div class="note">
+    <strong>作成上の注意</strong><br>
+    1. 賃借の場合は、本承諾書を賃貸人（所有者である父）が作成し、届出に添付する。<br>
+    2. 長崎県は指定フォーマットなし。物件・届出者・「住宅宿泊事業に使用することを承諾する」旨が分かればよい（2026-08-24 県確認）。<br>
+    3. 参考様式: 茨城県「住宅宿泊事業の用に供する承諾書」。宛先のみ長崎県知事に変更。<br>
+    4. 国の説明でも、民泊目的での使用・転貸を承諾していることが書面で明示されている必要がある。
+  </div>
+
+  <p class="hint">
+    ファイル: 02_届出/添付書類/02_住宅宿泊事業_承諾書.html
+  </p>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>建物賃貸借契約書</title>
+  <style>
+    @page { size: A4; margin: 18mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
+      font-size: 11pt;
+      line-height: 1.65;
+      color: #111;
+      max-width: 190mm;
+      margin: 0 auto;
+      padding: 12mm 8mm;
+    }
+    h1 {
+      text-align: center;
+      font-size: 18pt;
+      letter-spacing: 0.2em;
+      margin: 0 0 1.2em;
+      font-weight: bold;
+    }
+    .lead { margin-bottom: 1.2em; }
+    .blank { border-bottom: 1px solid #333; min-width: 8em; display: inline-block; padding: 0 0.3em; }
+    .blank.w { min-width: 14em; }
+    .blank.xl { min-width: 22em; }
+    table.meta {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.8em 0 1.2em;
+    }
+    table.meta th, table.meta td {
+      border: 1px solid #333;
+      padding: 0.45em 0.6em;
+      vertical-align: top;
+      text-align: left;
+    }
+    table.meta th {
+      width: 28%;
+      background: #f5f5f5;
+      font-weight: normal;
+    }
+    h2 {
+      font-size: 12pt;
+      margin: 1.3em 0 0.4em;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.15em;
+    }
+    ol.articles {
+      padding-left: 1.4em;
+      margin: 0.3em 0 0.8em;
+    }
+    ol.articles > li { margin: 0.55em 0; }
+    .note {
+      font-size: 9.5pt;
+      color: #333;
+      border: 1px solid #999;
+      padding: 0.7em 0.9em;
+      margin: 1.2em 0;
+      background: #fafafa;
+    }
+    .sign {
+      margin-top: 2em;
+      page-break-inside: avoid;
+    }
+    .sign-block {
+      margin: 1.4em 0;
+    }
+    .sign-row {
+      margin: 0.35em 0;
+    }
+    .hint {
+      font-size: 9pt;
+      color: #666;
+      margin-top: 2em;
+      border-top: 1px dashed #aaa;
+      padding-top: 0.8em;
+    }
+    @media print {
+      body { padding: 0; }
+      .hint { display: none; }
+      .no-print { display: none; }
+    }
+    .toolbar {
+      position: sticky; top: 0; background: #fff; border-bottom: 1px solid #ccc;
+      padding: 8px 0; margin-bottom: 12px; font-family: sans-serif; font-size: 13px;
+    }
+    .toolbar button {
+      padding: 6px 14px; margin-right: 8px; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar no-print">
+    <button onclick="window.print()">印刷 / PDF保存</button>
+    <span>空欄は印刷前に埋めてください。県は指定フォーマットなし・内容が分かればOKです。</span>
+  </div>
+
+  <h1>建物賃貸借契約書</h1>
+
+  <p class="lead">
+    賃貸人 <span class="blank w">【父・氏名】</span>（以下「甲」という。）と、
+    賃借人 <span class="blank w">小島 広太郎</span>（以下「乙」という。）は、
+    下記物件について、次のとおり建物賃貸借契約を締結する。
+  </p>
+
+  <h2>第1条（物件の表示）</h2>
+  <table class="meta">
+    <tr>
+      <th>所在</th>
+      <td>長崎県対馬市厳原町久田字洲賀崎 <span class="blank">704</span> 番<br>
+        （住居表示等がある場合）<span class="blank xl">【住居表示があれば記入】</span></td>
+    </tr>
+    <tr>
+      <th>家屋番号</th>
+      <td><span class="blank w">【建物全部事項の家屋番号】</span></td>
+    </tr>
+    <tr>
+      <th>建物の種類・構造</th>
+      <td><span class="blank xl">【例: 居宅・木造瓦葺2階建 等／全部事項の記載に合わせる】</span></td>
+    </tr>
+    <tr>
+      <th>床面積</th>
+      <td>約 <span class="blank">【全部事項の床面積】</span> ㎡（登記記載による）</td>
+    </tr>
+    <tr>
+      <th>賃貸の範囲</th>
+      <td>□ 建物全部　□ 建物一部（範囲: <span class="blank w">【】</span>）</td>
+    </tr>
+  </table>
+
+  <h2>第2条（使用目的）</h2>
+  <p>
+    乙は、本物件を自己の居住の用に供するとともに、
+    <strong>住宅宿泊事業法に基づく住宅宿泊事業（いわゆる民泊）</strong>の用に供することができる。
+  </p>
+
+  <h2>第3条（契約期間）</h2>
+  <p>
+    本契約の期間は、<span class="blank">令和　年　月　日</span>から
+    <span class="blank">令和　年　月　日</span>までの
+    <span class="blank">　</span>年間とする。<br>
+    期間満了の1か月前までに甲乙いずれからも書面による解約の申し出がないときは、
+    同一条件でさらに1年間更新されるものとし、以後も同様とする。
+  </p>
+
+  <h2>第4条（賃料）</h2>
+  <p>
+    賃料は月額 <span class="blank">【例: 10,000】</span> 円とし、
+    乙は毎月末日までに翌月分を甲の指定する方法で支払う。<br>
+    敷金・礼金は <span class="blank">無</span> とする（別途定める場合はその旨を記載）。
+  </p>
+
+  <h2>第5条（転貸・民泊）</h2>
+  <ol class="articles">
+    <li>乙が本物件を住宅宿泊事業の用に供すること、および宿泊者に対して本物件の一部または全部を使用させることについて、甲はあらかじめ承諾する。</li>
+    <li>乙は、住宅宿泊事業の届出、消防・県その他関係法令上必要な手続を自己の責任で行う。</li>
+    <li>本条の承諾の詳細は、別途「住宅宿泊事業の用に供する承諾書」に定めることができる。</li>
+  </ol>
+
+  <h2>第6条（修繕・管理）</h2>
+  <p>
+    通常の使用に伴う軽微な修繕は乙の負担とし、建物の構造に関わる修繕は甲と協議のうえ定める。
+    民泊運営に伴う清掃・消耗品等は乙の負担とする。
+  </p>
+
+  <h2>第7条（解除）</h2>
+  <p>
+    甲または乙が本契約に違反し、相当期間を定めて催告しても是正されないときは、相手方は本契約を解除できる。
+  </p>
+
+  <h2>第8条（協議）</h2>
+  <p>
+    本契約に定めのない事項、または解釈に疑義が生じた事項は、民法その他関係法令および一般慣行に従い、甲乙誠意をもって協議して定める。
+  </p>
+
+  <div class="note">
+    <strong>作成メモ（本文には含めない想定）</strong><br>
+    ・長崎県は書式自由。甲乙・物件・賃貸の事実・期間・賃料が分かれば足りる。<br>
+    ・家族間でも、名目賃料で構わないが「無償使用貸借」だと賃貸借の説明とずれるため、少額でも賃料を入れるのが無難。<br>
+    ・届出添付は写しで可。原本は各自保管。
+  </div>
+
+  <p>
+    本契約成立の証として本書2通を作成し、甲乙記名押印のうえ、各1通を保有する。
+  </p>
+
+  <p style="text-align:right; margin: 1.5em 0;">
+    契約日　令和 <span class="blank">　　</span> 年 <span class="blank">　　</span> 月 <span class="blank">　　</span> 日
+  </p>
+
+  <div class="sign">
+    <div class="sign-block">
+      <strong>（甲）賃貸人</strong>
+      <div class="sign-row">住所　<span class="blank xl">【父の住所】</span></div>
+      <div class="sign-row">氏名　<span class="blank w">【父・氏名】</span>　　印</div>
+    </div>
+    <div class="sign-block">
+      <strong>（乙）賃借人</strong>
+      <div class="sign-row">住所　<span class="blank xl">福岡県福岡市中央区薬院【番地】</span></div>
+      <div class="sign-row">氏名　<span class="blank w">小島 広太郎</span>　　印</div>
+    </div>
+  </div>
+
+  <p class="hint">
+    参考: 国土交通省「賃貸住宅標準契約書」の構成を簡略化し、住宅宿泊事業の使用を第2条・第5条で明示。<br>
+    ファイル: 02_届出/添付書類/01_賃貸借契約書.html
+  </p>
+</body>
+</html>
