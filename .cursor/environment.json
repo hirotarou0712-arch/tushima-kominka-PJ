@@ -1,4 +1,17 @@
 {
-  "install": "true",
-  "terminals": []
+  "name": "対馬古民家プロジェクト",
+  "install": "python3 --version",
+  "ports": [
+    {
+      "name": "tategu-photos",
+      "port": 8080
+    }
+  ],
+  "terminals": [
+    {
+      "name": "tategu-photos",
+      "command": "cd tools/tategu-photos && python3 -m http.server 8080 --bind 0.0.0.0",
+      "description": "建具採寸PWA（tools/tategu-photos）の静的サーバー。http://localhost:8080/ で開く。合言葉ゲートあり。"
+    }
+  ]
 }
